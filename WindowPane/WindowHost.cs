@@ -234,6 +234,9 @@ internal sealed class WindowHost : IDisposable
             return false;
         }
 
+        if (!TargetPolicy.IsAllowed(hwnd, out error))
+            return false;
+
         var style = NativeMethods.GetWindowLongPtr(hwnd, NativeMethods.GWL_STYLE).ToInt64();
         if ((style & NativeMethods.WS_CHILD) != 0)
         {

@@ -2,7 +2,9 @@
 
 A free, open-source Windows utility that docks other app windows into one clean pane.
 
-**Developer:** Dr. Psych
+**Developer:** Dr. Psych  
+**License:** [MIT](LICENSE) — free for personal and commercial use (use, copy, modify, distribute, sell)  
+**Privacy:** [PRIVACY.md](PRIVACY.md) · **Security:** [SECURITY.md](SECURITY.md) · **Model:** [docs/SECURITY-MODEL.md](docs/SECURITY-MODEL.md)
 
 ## Principles
 
@@ -10,9 +12,7 @@ A free, open-source Windows utility that docks other app windows into one clean 
 - **No telemetry / no tracking / no phoning home**
 - **No accounts, no cloud dependency**
 - Settings stay on your machine (`%AppData%\WindowPane\settings.json`)
-- Free for **personal and commercial** use — use, copy, modify, distribute, and sell
-
-Licensed under the [MIT License](LICENSE).
+- Fail closed when docking would cross UIPI / session / user boundaries
 
 ## What it does
 
@@ -52,10 +52,10 @@ Or run:
 
 ## Notes
 
-- Some UWP apps and elevated (admin) windows may refuse hosting unless Window Pane is also elevated.
+- Some UWP apps and elevated (admin) windows may refuse hosting — Window Pane will refuse mismatched integrity levels for safety.
 - A few Chromium / Electron apps can look odd after reparenting; release them if that happens.
 - Windows Snap still works at screen edges; drop inside the pane (away from edges) to dock.
 
 ## Contributing
 
-Issues and PRs welcome. Keep the project free of telemetry and account walls.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Keep the project free of telemetry and account walls.
